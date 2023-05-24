@@ -7,6 +7,14 @@ TagManager:
   - BlendPlane0
   - BlendPlane1
   - Hit
+  - Duck
+  - Taipan
+  - Gecko
+  - Muskrat
+  - Pudu
+  - Sparrow
+  - Colobus
+  - Chicken
   layers:
   - Default
   - TransparentFX
@@ -16,7 +24,7 @@ TagManager:
   - UI
   - BlendPlane0
   - BlendPlane1
-  - 
+  - Animal
   - 
   - 
   - 

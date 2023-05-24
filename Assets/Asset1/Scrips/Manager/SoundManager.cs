@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -10,6 +10,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip gallina;
     public AudioClip hamster;
     public AudioClip lagarto;
+
+    [SerializeField] private AudioSource audio;
 
     private Vector3 cameraPosition;
     // Start is called before the first frame update
@@ -27,14 +29,15 @@ public class SoundManager : MonoBehaviour
     }
     private void PlaySound(AudioClip clip)
     {
-        AudioSource.PlayClipAtPoint(clip, cameraPosition);
+        audio.clip = clip;
+        audio.Play();
     }
-    public void PlayChiken()
+    public void PlayChicken()
     {
         PlaySound(gallina);
     }
 
-    public void PlayHamser()
+    public void PlayMuskrat()
     {
         PlaySound(hamster);
     }
