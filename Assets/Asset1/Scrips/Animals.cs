@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -41,7 +42,8 @@ public class Animals : MonoBehaviour
     { 
         if (other.CompareTag("Hit") ) 
         {
-            Bounce();  
+            Bounce();
+            Debug.Log(this.gameObject.name + " patata");
         }
 
         SoundManager.Instance.PlayChiken();
@@ -50,7 +52,8 @@ public class Animals : MonoBehaviour
     }
     private void Bounce()
     {
-        transform.Rotate(0,transform.rotation.y + UnityEngine.Random.Range(120, 240), 0);
+        transform.Rotate(0,transform.rotation.y + UnityEngine.Random.Range(170, 190), 0);
+        Debug.Log(this.gameObject.name + " pistacho");
 
     }
 }
