@@ -38,11 +38,15 @@ public class Animals : MonoBehaviour
         Destroy(gameObject, gotHayDestroyDelay); 
     }
     private void OnTriggerEnter(Collider other) 
-    {
+    { 
         if (other.CompareTag("Hit") ) 
         {
             Bounce();  
         }
+
+        SoundManager.Instance.PlayChiken();
+        SoundManager.Instance.PlayHamser();
+        SoundManager.Instance.Playlagarto();
     }
     private void Bounce()
     {
