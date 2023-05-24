@@ -3580,19 +3580,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &881465875
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881465870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 11.46, z: 17.06}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &891462435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7490,6 +7477,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 6223274058190859881, guid: 1f9379f42cf20ee4ab3c20c12776df37, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7544346364837900344, guid: 1f9379f42cf20ee4ab3c20c12776df37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.8
@@ -7610,7 +7601,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 898903884304177436, guid: 1f9379f42cf20ee4ab3c20c12776df37, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1f9379f42cf20ee4ab3c20c12776df37, type: 3}
 --- !u!1 &1829244899
 GameObject:
