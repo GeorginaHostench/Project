@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            animal = animal;
+     
         }
     }
 }
