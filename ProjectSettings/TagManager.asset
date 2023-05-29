@@ -15,6 +15,7 @@ TagManager:
   - Sparrow
   - Colobus
   - Chicken
+  - Drop
   layers:
   - Default
   - TransparentFX

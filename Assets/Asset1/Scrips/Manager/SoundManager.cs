@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-//using System.Diagnostics;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -8,8 +7,13 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     public AudioClip gallina;
+    public AudioClip pato;
     public AudioClip hamster;
     public AudioClip lagarto;
+    public AudioClip serpiente;
+    public AudioClip mono;
+    public AudioClip vaca;
+    public AudioClip pajaro;
 
     [SerializeField] private AudioSource audio;
 
@@ -36,14 +40,33 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(gallina);
     }
-
+    public void PlayDuck()
+    {
+      PlaySound(pato);
+     }
+    public void PlayTaipan()
+    {
+        PlaySound(serpiente);
+    }
     public void PlayMuskrat()
     {
         PlaySound(hamster);
     }
-
-    public void Playlagarto()
+    public void PlayGecko()
     {
         PlaySound(lagarto);
+    }
+    public void PlayColobus()
+    {
+        PlaySound(mono);
+    }
+    public void PlayPudu()
+    {
+        PlaySound(vaca);
+    }
+
+    public void PlaySparrow()
+    {
+        PlaySound(pajaro);
     }
 }

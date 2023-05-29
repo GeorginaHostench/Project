@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-//using System.Diagnostics;
-//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -14,6 +12,7 @@ public class Animals : MonoBehaviour
     public float dropDestroyDelay;
     private Collider myCollider;
     private Rigidbody myRigidbody;
+    public GameObject animal;
 
     public Material playerEmpty;
     public Material playerTrigger;
@@ -47,23 +46,52 @@ public class Animals : MonoBehaviour
         if (other.CompareTag("Hit"))
         {
             Bounce();
- 
         }
+
+        if (other.CompareTag("Drop"))
+        {
+            Revive();
+        }
+
         if (other.CompareTag("Player"))
         {
             other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerTrigger;
-
 
             switch (this.gameObject.tag)
             {
 
                 case "Chicken":
                     SoundManager.Instance.PlayChicken();
+                    animal = this.gameObject;
+                    break;
+                case "Duck":
+                    SoundManager.Instance.PlayDuck();
+                    animal = this.gameObject;
+                    break;
+                case "Taipan":
+                    SoundManager.Instance.PlayTaipan();
+                    animal = this.gameObject;
                     break;
                 case "Muskrat":
                     SoundManager.Instance.PlayMuskrat();
+                    animal = this.gameObject;
                     break;
-
+                case "Gecko":
+                    SoundManager.Instance.PlayGecko();
+                    animal = this.gameObject;
+                    break;
+                case "Colobus":
+                    SoundManager.Instance.PlayColobus();
+                    animal = this.gameObject;
+                    break;
+                case "Pudu":
+                    SoundManager.Instance.PlayPudu();
+                    animal = this.gameObject;
+                    break;
+                case "Sparrow":
+                    SoundManager.Instance.PlaySparrow();
+                    animal = this.gameObject;
+                    break;
                 default:
                     break;
             }
@@ -81,7 +109,10 @@ public class Animals : MonoBehaviour
         transform.Rotate(0, transform.rotation.y + UnityEngine.Random.Range(170, 190), 0);
        //Instantiate(this, new Vector3(10, 0, 0), new Quaternion(0, 0, 0, 0));
        //Destroy(this.gameObject);
-
-
+    }
+    private void Revive()
+    {
+        Instantiate(this, new Vector3(10, 0, 0), new Quaternion(0, 0, 0, 0));
+        Destroy(this.gameObject);
     }
 }
