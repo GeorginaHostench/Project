@@ -112,7 +112,23 @@ public class Animals : MonoBehaviour
     }
     private void Revive()
     {
-        Instantiate(this, new Vector3(10, 0, 0), new Quaternion(0, 0, 0, 0));
+        List<Vector3> points = new List<Vector3>();
+        Vector3 vector1 = new Vector3(1, 0, 1);
+        Vector3 vector2 = new Vector3(1, 0, 98);
+        Vector3 vector3 = new Vector3(98, 0, 98);
+        Vector3 vector4 = new Vector3(98, 0, 1);
+        points.Add(vector1);
+        points.Add(vector2);
+        points.Add(vector3);
+        points.Add(vector4);
+
+        Instantiate(this, points[UnityEngine.Random.Range(0, 3)], new Quaternion(0, 0, 0, 0));
         Destroy(this.gameObject);
     }
+    /*private void salto(){
+        for (int i in Animals){
+            Destroy(this.gameObject);
+        }
+        //sumariamos 1 punto
+    }*/
 }
