@@ -420,7 +420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42815639}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 57.3, y: -9.551356, z: -6.3}
+  m_LocalPosition: {x: 54.5, y: -9.551356, z: -6.3}
   m_LocalScale: {x: 130, y: 20, z: 15}
   m_Children: []
   m_Father: {fileID: 1622035016}
@@ -1339,7 +1339,7 @@ GameObject:
   - component: {fileID: 105218407}
   - component: {fileID: 105218408}
   m_Layer: 0
-  m_Name: DropSouth (2)
+  m_Name: DropEast
   m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1568,7 +1568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169544029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4887123, y: -9.551356, z: 58}
+  m_LocalPosition: {x: -2.4887123, y: -9.551356, z: 53.7}
   m_LocalScale: {x: 130, y: 20, z: 15}
   m_Children: []
   m_Father: {fileID: 1622035016}
@@ -2223,7 +2223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308276690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.21, y: 0, z: 7.16}
+  m_LocalPosition: {x: 1.21, y: 0, z: 5.55}
   m_LocalScale: {x: 0.1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1941224604}
@@ -3347,10 +3347,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTracking: 0
   numberOfPlayers: 2
-  enableYAxis: 0
+  enableYAxis: 1
   players:
   - {fileID: 1440896347}
-  - {fileID: 1471923275}
+  - {fileID: 1865111049}
   trackingInterface: {fileID: 220600112}
   scaleText: {fileID: 1866559965}
   sheerXText: {fileID: 1425858000}
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 827119231}
   - component: {fileID: 827119232}
   m_Layer: 0
-  m_Name: DropSouth (1)
+  m_Name: DropWest
   m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4153,7 +4153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922775120}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -67.5, y: -9.551356, z: -6.3}
+  m_LocalPosition: {x: -64.3, y: -9.551356, z: -6.3}
   m_LocalScale: {x: 130, y: 20, z: 15}
   m_Children: []
   m_Father: {fileID: 1622035016}
@@ -10515,7 +10515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123668403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4887123, y: -9.551356, z: -72.912766}
+  m_LocalPosition: {x: -2.4887123, y: -9.551356, z: -70.1}
   m_LocalScale: {x: 130, y: 20, z: 15}
   m_Children: []
   m_Father: {fileID: 1622035016}
