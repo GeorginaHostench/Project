@@ -16,6 +16,14 @@ TagManager:
   - Colobus
   - Chicken
   - Drop
+  - Chiken2
+  - Duck2
+  - Taipan2
+  - Geko2
+  - Colobus2
+  - Muskrat2
+  - Pudu2
+  - Sparrow2
   layers:
   - Default
   - TransparentFX

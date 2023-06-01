@@ -4,10 +4,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour, IPointerClickHandler
+public class StartButton : MonoBehaviour
 {
-    public void OnPointerClick(PointerEventData eventData) 
+    void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Scene");
+        Debug.Log(" patata");
+        // Verificar si el objeto que ha entrado en el trigger tiene el tag del jugador
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log(" SCene");
+            SceneManager.LoadScene("Scene");
+        }
     }
+
 }
