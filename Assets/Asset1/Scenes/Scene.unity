@@ -6037,6 +6037,7 @@ MonoBehaviour:
   TotalAnimals: 8
   TotalTime: 5
   startTime: 0
+  EndTime: 300
 --- !u!1 &1400645010
 GameObject:
   m_ObjectHideFlags: 0
