@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     public GameObject Chiken;
@@ -42,7 +43,6 @@ public class GameManager : MonoBehaviour
          {
             if (playerObject1.animalobject != null && playerObject2.animalobject != null)
             {
-                Debug.Log(" Animals");
                 switch (playerObject1.animalobject.tag){
 
                     case "Chiken":
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Chiken2":
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Duck":
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Duck2":
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Taipan":
@@ -86,6 +90,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Taipan2":
@@ -95,6 +100,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Geko":
@@ -104,6 +110,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Geko2":
@@ -113,6 +120,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Colobus":
@@ -122,6 +130,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Colobus2":
@@ -131,6 +140,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Muskrat":
@@ -141,6 +151,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Muskrat2":
@@ -151,6 +162,8 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
+                        
                         }
                         break;
                     case "Pudu":
@@ -160,6 +173,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Pudu2":
@@ -169,6 +183,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Sparrow":
@@ -178,6 +193,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
                     case "Sparrow2":
@@ -187,6 +203,7 @@ public class GameManager : MonoBehaviour
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
+                            GameStateManager.Instance.SavedAnimal();
                         }
                         break;
 

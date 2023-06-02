@@ -18,8 +18,8 @@ public class UIManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {   
+        OutOfTime.text = GameStateManager.Instance.TotalTime.ToString();
     }
 
     public void UpdateAnimalSaved() 
@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateOutOfTime() 
     {
-        AnimalsSavedText.text = GameStateManager.Instance.TotalTime;
+        
     }
     public void ShowGameOverWindow()
     {

@@ -6030,12 +6030,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379281144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c7ba6649a7a7df499d5c88239ff2a63, type: 3}
+  m_Script: {fileID: 11500000, guid: 24af4178bf4a4254e9d4770460bda03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnimalsSaved: 0
-  TotalAnimals: 2
-  TotalTime: 
+  TotalAnimals: 8
+  TotalTime: 5
   startTime: 0
 --- !u!1 &1400645010
 GameObject:
@@ -6483,7 +6483,7 @@ Transform:
   - {fileID: 2124065404}
   - {fileID: 1379281145}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448092806
 GameObject:
@@ -9834,7 +9834,7 @@ Transform:
   - {fileID: 420975762}
   - {fileID: 638419660}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1966654673
 GameObject:
@@ -11260,7 +11260,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124065403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef3851d226f3b740a49857e32b93c07, type: 3}
+  m_Script: {fileID: 11500000, guid: 60277efc539878948a566fa1dce2fdb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnimalsSavedText: {fileID: 502043780}

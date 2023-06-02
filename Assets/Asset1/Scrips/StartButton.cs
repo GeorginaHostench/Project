@@ -8,7 +8,6 @@ public class StartButton : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(" patata");
         // Verificar si el objeto que ha entrado en el trigger tiene el tag del jugador
         if (other.CompareTag("Player"))
         {
