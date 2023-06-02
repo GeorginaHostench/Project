@@ -30,7 +30,6 @@ public class StartButton : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        // Verificar si el objeto que ha entrado en el trigger tiene el tag del jugador
         isplayerinside = false;
         currentplayer = null;
     }
