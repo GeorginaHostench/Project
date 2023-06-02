@@ -6,14 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    public bool isplayerinside= false;
+    public GameObject currentplayer;
+    void Update()
+    {
+        if (isplayerinside)
+        {
+            if (currentplayer.transform.position.y > 13f)
+            {
+                SceneManager.LoadScene("Scene");
+            }
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         // Verificar si el objeto que ha entrado en el trigger tiene el tag del jugador
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log(" SCene");
-            SceneManager.LoadScene("Scene");
+            isplayerinside = true;
+            currentplayer = other.gameObject;  
+            
         }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        // Verificar si el objeto que ha entrado en el trigger tiene el tag del jugador
+        isplayerinside = false;
+        currentplayer = null;
     }
 
 }
