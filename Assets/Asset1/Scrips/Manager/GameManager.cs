@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Chiken;
-    public GameObject Chiken2;
+    public GameObject Chicken;
+    public GameObject Chicken2;
     public GameObject Duck;
     public GameObject Duck2;
     public GameObject Taipan;
     public GameObject Taipan2;
-    public GameObject Geko;
+    public GameObject Gecko;
     public GameObject Geko2;
     public GameObject Colobus;
     public GameObject Colobus2;
@@ -45,8 +45,9 @@ public class GameManager : MonoBehaviour
             {
                 switch (playerObject1.animalobject.tag){
 
-                    case "Chiken":
-                        if(playerObject2.animalobject.tag == "Chiken2"){
+                    case "Chicken":
+                        if (playerObject2.animalobject.tag == "Chicken2")
+                        {
                             Destroy(playerObject1.animalobject);
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
@@ -54,8 +55,8 @@ public class GameManager : MonoBehaviour
                             GameStateManager.Instance.SavedAnimal();
                         }
                         break;
-                    case "Chiken2":
-                        if (playerObject2.animalobject.tag == "Chiken"){
+                    case "Chicken2":
+                        if (playerObject2.animalobject.tag == "Chicken"){
                             Destroy(playerObject1.animalobject);
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
@@ -103,7 +104,7 @@ public class GameManager : MonoBehaviour
                             GameStateManager.Instance.SavedAnimal();
                         }
                         break;
-                    case "Geko":
+                    case "Gecko":
                         if (playerObject2.animalobject.tag == "Geko2")
                         {
                             Destroy(playerObject1.animalobject);
@@ -114,7 +115,7 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case "Geko2":
-                        if (playerObject2.animalobject.tag == "Geko")
+                        if (playerObject2.animalobject.tag == "Gecko")
                         {
                             Destroy(playerObject1.animalobject);
                             Destroy(playerObject2.animalobject);

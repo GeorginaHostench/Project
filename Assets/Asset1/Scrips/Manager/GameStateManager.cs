@@ -48,5 +48,6 @@ public class GameStateManager : MonoBehaviour
     private void GameOver()
     {
         UIManager.Instance.ShowGameOverWindow();
+        Time.timeScale = 0f;
     }
 }

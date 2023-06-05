@@ -4,9 +4,9 @@ using UnityEngine;
 public class Animals : MonoBehaviour
 {
     public float runSpeed;
-    public float gotHayDestroyDelay;
+   // public float gotHayDestroyDelay;
     private bool hit;
-    public float dropDestroyDelay;
+    //public float dropDestroyDelay;
     private Collider myCollider;
     private Rigidbody myRigidbody;
     public GameObject animal;
@@ -37,7 +37,8 @@ public class Animals : MonoBehaviour
     {
         hit = true;
         runSpeed = 0;
-        Destroy(gameObject, gotHayDestroyDelay);
+        Destroy(gameObject);
+        //Destroy(gotHayDestroyDelay);
     }
 
     private void OnTriggerEnter(Collider other)

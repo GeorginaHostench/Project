@@ -1141,7 +1141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8751688361294739468, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
       propertyPath: m_TagString
-      value: Chiken2
+      value: Chicken2
       objectReference: {fileID: 0}
     - target: {fileID: 8754778678086492358, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -5266,13 +5266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68143e90bd473da4aad71284449c5191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chiken: {fileID: 324931911}
-  Chiken2: {fileID: 1375606755}
+  Chicken: {fileID: 324931911}
+  Chicken2: {fileID: 1375606755}
   Duck: {fileID: 2104808483}
   Duck2: {fileID: 1744231776}
   Taipan: {fileID: 1664832977}
   Taipan2: {fileID: 1985852964}
-  Geko: {fileID: 1847239892}
+  Gecko: {fileID: 1847239892}
   Geko2: {fileID: 2142148460}
   Colobus: {fileID: 122227370}
   Colobus2: {fileID: 73191238}
