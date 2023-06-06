@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 586921205}
   m_Layer: 0
   m_Name: Title
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3176,9 +3176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8af144a228c0cc409d47d3e6bbb5192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableTracking: 0
+  enableTracking: 1
   numberOfPlayers: 2
-  enableYAxis: 0
+  enableYAxis: 1
   players:
   - {fileID: 1440896347}
   - {fileID: 1471923275}
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 1164165877}
   m_Layer: 0
   m_Name: Start
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5699,7 +5699,7 @@ GameObject:
   - component: {fileID: 1438410667}
   m_Layer: 0
   m_Name: Quit
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
