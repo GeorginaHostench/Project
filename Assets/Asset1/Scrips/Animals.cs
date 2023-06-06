@@ -146,9 +146,9 @@ public class Animals : MonoBehaviour
     private void Revive()
     {
         List<Vector3> points = new List<Vector3>();
-        Vector3 vector1 = new Vector3(2, 0, 2);
-        Vector3 vector3 = new Vector3(98, 0, 98);
-        Vector3 vector4 = new Vector3(98, 0, 2);
+        Vector3 vector1 = new Vector3(2, -20, 2);
+        Vector3 vector3 = new Vector3(98, -20, 98);
+        Vector3 vector4 = new Vector3(98, -20, 2);
         points.Add(vector1);
         points.Add(vector3);
         points.Add(vector4);

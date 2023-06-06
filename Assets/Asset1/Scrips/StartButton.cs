@@ -8,12 +8,15 @@ public class StartButton : MonoBehaviour
 {
     public bool isplayerinside= false;
     public GameObject currentplayer;
+
     void Update()
     {
         if (isplayerinside)
         {
-            if (currentplayer.transform.position.y > -17f)
+            Debug.Log(currentplayer.transform.position.y);
+            if (currentplayer.transform.position.y > -15f)
             {
+                
                 SceneManager.LoadScene("Scene");
             }
         }

@@ -18,22 +18,10 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (this.gameObject.transform.position.y > -17f)
+        if (this.gameObject.transform.position.y > -15f)
         {
             isjumping = true;
-        }
-
-        if (this.gameObject.transform.position.x > 78 && this.gameObject.transform.position.x < 100
-        && this.gameObject.transform.position.z > 21 && this.gameObject.transform.position.z > 28)
-        {
-            Debug.Log("ACTIVATORP");
-    
-        }
-        if (this.gameObject.transform.position.x > 10 && this.gameObject.transform.position.x < 31
-            && this.gameObject.transform.position.z > 21 && this.gameObject.transform.position.z > 28)
-        {
-            Debug.Log("ACTIVATORP");
-           
+            
         }
 
     }

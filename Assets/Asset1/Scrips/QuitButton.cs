@@ -14,7 +14,7 @@ public class QuitButton : MonoBehaviour
     {
         if (isplayerinside)
         {
-            if (currentplayer.transform.position.y > 13f)
+            if (currentplayer.transform.position.y > -17f)
             {
                 UnityEngine.Application.Quit();
             }
