@@ -12,7 +12,7 @@ public class StartButton : MonoBehaviour
     {
         if (isplayerinside)
         {
-            if (currentplayer.transform.position.y > 13f)
+            if (currentplayer.transform.position.y > -17f)
             {
                 SceneManager.LoadScene("Scene");
             }
