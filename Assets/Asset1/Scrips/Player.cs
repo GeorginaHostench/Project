@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (this.gameObject.transform.position.y > 3f)
+        if (this.gameObject.transform.position.y > -17f)
         {
             isjumping = true;
         }
