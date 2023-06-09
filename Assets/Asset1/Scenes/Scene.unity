@@ -3030,7 +3030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81, y: 114}
+  m_AnchoredPosition: {x: -312, y: -120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502043780
@@ -4363,7 +4363,7 @@ Transform:
   m_GameObject: {fileID: 872591954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 6, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 1865111053}
   m_RootOrder: 0
@@ -4449,7 +4449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alturaFinal: 1.1
-  tiempoTotal: 300
+  tiempoTotal: 120
 --- !u!1 &891462435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 126, y: 115}
+  m_AnchoredPosition: {x: -230, y: -120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949681121
@@ -6030,14 +6030,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379281144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24af4178bf4a4254e9d4770460bda03b, type: 3}
+  m_Script: {fileID: 11500000, guid: d4fa64c3d1de6d14e9bde6dd7d0f9c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnimalsSaved: 0
   TotalAnimals: 8
-  TotalTime: 5
+  TotalTime: 120
   startTime: 0
-  EndTime: 300
+  EndTime: 120
 --- !u!1 &1400645010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6374,7 +6374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440896347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 25}
+  m_LocalPosition: {x: 25.1, y: 0, z: 13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2039005833}
@@ -6408,6 +6408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isjumping: 0
   animalobject: {fileID: 0}
+  playerisjumping: {fileID: 2100000, guid: 1149b93ac04c554488dec64092e9e987, type: 2}
 --- !u!1 &1446576903
 GameObject:
   m_ObjectHideFlags: 0
@@ -8220,6 +8221,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -29.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3898002468213295862, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject1
+      value: 
+      objectReference: {fileID: 1440896353}
+    - target: {fileID: 3898002468213295862, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject2
+      value: 
+      objectReference: {fileID: 1865111055}
+    - target: {fileID: 3898002468213295862, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerisjumping
+      value: 
+      objectReference: {fileID: 2100000, guid: 1149b93ac04c554488dec64092e9e987, type: 2}
     - target: {fileID: 4172923127183367729, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
       propertyPath: runSpeed
       value: 7
@@ -8228,6 +8241,18 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4425445128082729179, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject1
+      value: 
+      objectReference: {fileID: 1440896353}
+    - target: {fileID: 4425445128082729179, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject2
+      value: 
+      objectReference: {fileID: 1865111055}
+    - target: {fileID: 4425445128082729179, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerisjumping
+      value: 
+      objectReference: {fileID: 2100000, guid: 1149b93ac04c554488dec64092e9e987, type: 2}
     - target: {fileID: 4854346962710796515, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -8256,6 +8281,18 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6906640416499806532, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject1
+      value: 
+      objectReference: {fileID: 1440896353}
+    - target: {fileID: 6906640416499806532, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerObject2
+      value: 
+      objectReference: {fileID: 1865111055}
+    - target: {fileID: 6906640416499806532, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
+      propertyPath: playerisjumping
+      value: 
+      objectReference: {fileID: 2100000, guid: 1149b93ac04c554488dec64092e9e987, type: 2}
     - target: {fileID: 7933812919348847798, guid: 20add2ad4c6869d4e9b14585377c61eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -9312,7 +9349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865111049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75, y: 0, z: 25}
+  m_LocalPosition: {x: 87.7, y: 8, z: 13.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 872591955}
@@ -9346,6 +9383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isjumping: 0
   animalobject: {fileID: 0}
+  playerisjumping: {fileID: 2100000, guid: 1149b93ac04c554488dec64092e9e987, type: 2}
 --- !u!1 &1866559963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10549,7 +10587,7 @@ Transform:
   m_GameObject: {fileID: 2039005832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 6, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 1440896351}
   m_RootOrder: 0

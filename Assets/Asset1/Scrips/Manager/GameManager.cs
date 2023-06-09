@@ -24,10 +24,12 @@ public class GameManager : MonoBehaviour
     public Player playerObject1;
     public Player playerObject2;
     public Material playerEmpty;
+    //public Material playerisjumping;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,12 +40,15 @@ public class GameManager : MonoBehaviour
 
     private void salto()
     {
-        // Check if the player's Y position is greater than 3
-         if (playerObject1.isjumping && playerObject2.isjumping)
-         {
+        // Check if the players are jumping
+        if (playerObject1.isjumping && playerObject2.isjumping)
+        {
+            //playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerisjumping;
+            //playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerisjumping;
             if (playerObject1.animalobject != null && playerObject2.animalobject != null)
             {
-                switch (playerObject1.animalobject.tag){
+                switch (playerObject1.animalobject.tag)
+                {
 
                     case "Chicken":
                         if (playerObject2.animalobject.tag == "Chicken2")
@@ -56,7 +61,8 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case "Chicken2":
-                        if (playerObject2.animalobject.tag == "Chicken"){
+                        if (playerObject2.animalobject.tag == "Chicken")
+                        {
                             Destroy(playerObject1.animalobject);
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
@@ -164,7 +170,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
-                        
+
                         }
                         break;
                     case "Pudu":
@@ -209,13 +215,11 @@ public class GameManager : MonoBehaviour
                         break;
 
                 }
-                
+
             }
-            
-         }
+
+        }
 
     }
 
-
-    
 }

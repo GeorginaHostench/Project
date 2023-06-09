@@ -13,6 +13,7 @@ public class GameStateManager : MonoBehaviour
     public float TotalTime;
     public float startTime;
     public float EndTime;
+    private bool GameOv=false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,17 +24,18 @@ public class GameStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameOv == false){
+            float elapsedTime = Time.time - startTime; // Calcula el tiempo transcurrido desde el inicio del juego
+            TotalTime = elapsedTime;
 
-        float elapsedTime = Time.time - startTime; // Calcula el tiempo transcurrido desde el inicio del juego
-        TotalTime = elapsedTime;
-
-        if (EndTime < TotalTime)
-        {
-            GameOver();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Menu");
+            if (EndTime < TotalTime)
+            {
+                GameOver();
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Menu");
+            }
         }
     }
     public void SavedAnimal()
@@ -47,7 +49,17 @@ public class GameStateManager : MonoBehaviour
     }
     private void GameOver()
     {
+        GameOv=true;
         UIManager.Instance.ShowGameOverWindow();
-        Time.timeScale = 0f;
+        StartCoroutine(DoActionAfterDelay());
+        
+
+    }
+    IEnumerator DoActionAfterDelay()
+    {
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene("Menu");
+        GameOv=false;
+        
     }
 }

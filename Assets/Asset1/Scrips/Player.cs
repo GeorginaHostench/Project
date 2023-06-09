@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public GameObject animalobject;
     public static Player Instance;
 
+    public Material playerisjumping;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +19,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         if (this.gameObject.transform.position.y > -15f)
         {
             isjumping = true;
-            
+            this.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerisjumping;
         }
-
+        
     }
+
+
 }

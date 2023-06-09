@@ -4,9 +4,7 @@ using UnityEngine;
 public class Animals : MonoBehaviour
 {
     public float runSpeed;
-   // public float gotHayDestroyDelay;
     private bool hit;
-    //public float dropDestroyDelay;
     private Collider myCollider;
     private Rigidbody myRigidbody;
     public GameObject animal;
@@ -38,7 +36,6 @@ public class Animals : MonoBehaviour
         hit = true;
         runSpeed = 0;
         Destroy(gameObject);
-        //Destroy(gotHayDestroyDelay);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,6 +54,7 @@ public class Animals : MonoBehaviour
         {
             other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerTrigger;
             other.gameObject.GetComponent<Player>().animalobject = this.gameObject;
+           
             switch (this.gameObject.tag)
             {
 
