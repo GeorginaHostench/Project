@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip mono;
     public AudioClip vaca;
     public AudioClip pajaro;
+    public AudioClip check;
+    public AudioClip boat;
 
     [SerializeField] private AudioSource audio;
 
@@ -23,7 +25,6 @@ public class SoundManager : MonoBehaviour
     {
         Instance = this;
         cameraPosition = Camera.main.transform.position;
-
     }
 
     // Update is called once per frame
@@ -64,9 +65,16 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(vaca);
     }
-
     public void PlaySparrow()
     {
         PlaySound(pajaro);
+    }
+    public void PlayCheck()
+    {
+        PlaySound(check);
+    }
+    public void PlayBoat()
+    {
+        PlaySound(boat);
     }
 }

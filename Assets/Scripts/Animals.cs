@@ -4,7 +4,6 @@ using UnityEngine;
 public class Animals : MonoBehaviour
 {
     public float runSpeed;
-    private bool hit;
     private Collider myCollider;
     private Rigidbody myRigidbody;
     public GameObject animal;
@@ -23,7 +22,9 @@ public class Animals : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //the animals move
         transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+        //Every one in a 100 frames an animal rotate a random range
         if (UnityEngine.Random.Range(0, 100) < 1)
         {
             transform.Rotate(0, transform.rotation.y + UnityEngine.Random.Range(0, 45), 0);
@@ -31,20 +32,14 @@ public class Animals : MonoBehaviour
 
     }
 
-    private void Hit()
-    {
-        hit = true;
-        runSpeed = 0;
-        Destroy(gameObject);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        //If a gameObject has a tag name Hit do bounce 
         if (other.CompareTag("Hit"))
         {
             Bounce();
         }
-
+        //When the triggers have a Drop they revive in the spawners 
         if (other.CompareTag("Drop"))
         {
             Revive();
@@ -52,12 +47,13 @@ public class Animals : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            //The player area changes to blue when an animal is inside
             other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerTrigger;
             other.gameObject.GetComponent<Player>().animalobject = this.gameObject;
            
+            //When the animals have their respective tag, they will have a sound
             switch (this.gameObject.tag)
             {
-
                 case "Chicken":
                     SoundManager.Instance.PlayChicken();
                     animal = this.gameObject;
@@ -128,19 +124,23 @@ public class Animals : MonoBehaviour
         }
     }
 
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            //The player area changes to red again
             other.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
         }
     }
 
+    //Function that the animal will rotate between 170 and 190 degress, when they hit into a tag named Hit
     private void Bounce()
     {
         transform.Rotate(0, transform.rotation.y + UnityEngine.Random.Range(170, 190), 0);
     }
 
+    //Function that have three spawners
     private void Revive()
     {
         List<Vector3> points = new List<Vector3>();
@@ -151,9 +151,9 @@ public class Animals : MonoBehaviour
         points.Add(vector3);
         points.Add(vector4);
 
+        //Creates the animal in one of the three spawners and destroy the old animal
         Instantiate(this, points[UnityEngine.Random.Range(0, 3)], new Quaternion(0, 0, 0, 0));
         Destroy(this.gameObject);
     }
 
 }
-

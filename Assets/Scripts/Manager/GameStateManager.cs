@@ -27,36 +27,40 @@ public class GameStateManager : MonoBehaviour
         if (GameOv == false){
             float elapsedTime = Time.time - startTime; // Calcula el tiempo transcurrido desde el inicio del juego
             TotalTime = elapsedTime;
-
+            //Si el tiempo transcurrido es mayor al tiempo final, acaba el juego
             if (EndTime < TotalTime)
             {
                 GameOver();
             }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                SceneManager.LoadScene("Menu");
-            }
         }
     }
+
+    //actualiza el numero de animales salvados 
     public void SavedAnimal()
     {
         AnimalsSaved++;
         UIManager.Instance.UpdateAnimalSaved();
+        //Si el counter es igual al total de animales, va a la window de gameover
         if (AnimalsSaved == TotalAnimals)
         {
             GameOver();
         }
     }
+
+    //El juego acaba, va a la GameOverWindow i se activa la DoActionAfterDelay()
     private void GameOver()
     {
-        GameOv=true;
+        SoundManager.Instance.PlayBoat();
+        GameOv =true;
         UIManager.Instance.ShowGameOverWindow();
         StartCoroutine(DoActionAfterDelay());
         
 
     }
+    //Corutina 
     IEnumerator DoActionAfterDelay()
     {
+        //Cuando acaba el juego, espera 10s i carga la escena de menu
         yield return new WaitForSeconds(10f);
         SceneManager.LoadScene("Menu");
         GameOv=false;

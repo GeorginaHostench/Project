@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alturaFinal: 2
-  tiempoTotal: 15
+  tiempoTotal: 150
 --- !u!1 &891462435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,6 +4361,8 @@ MonoBehaviour:
   mono: {fileID: 8300000, guid: ea02a261cbd5b0e4ba5b99099b9027a3, type: 3}
   vaca: {fileID: 8300000, guid: 3d02d1dbd5610234e99782af8b57804f, type: 3}
   pajaro: {fileID: 8300000, guid: 00d7af69b342644439afb9107a7bac12, type: 3}
+  check: {fileID: 8300000, guid: a8808274c7154d84ebac8079d62d5b58, type: 3}
+  boat: {fileID: 8300000, guid: 7ba6c4be72cc19144b8df2eb3c027748, type: 3}
   audio: {fileID: 978551380}
 --- !u!82 &978551380
 AudioSource:
@@ -4945,7 +4947,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b5403fe06d277f1428bb055b85362298, type: 2}
+  - {fileID: 2100000, guid: 9a3dd0eec3dac904e9d3d33e0ba8a23b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5788,7 +5790,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07d2dc2b5712c1e41914bf25c5c49eab, type: 2}
+  - {fileID: 2100000, guid: 119e631fc230b17489eca2bfb4ca1eee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5834,7 +5836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.203854, y: 0}
+  m_AnchoredPosition: {x: -12.203854, y: 0.21}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1440896347
@@ -9871,7 +9873,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ce62c975669f06342bbb4113b130377d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c51a74fdf26ab284eb267d03ddca741c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

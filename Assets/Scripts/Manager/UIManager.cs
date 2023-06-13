@@ -21,15 +21,17 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         int minutes = Mathf.FloorToInt(GameStateManager.Instance.TotalTime / 60); // Calcula los minutos
-        int seconds = Mathf.FloorToInt(GameStateManager.Instance.TotalTime % 60);
-        OutOfTime.text = (minutes.ToString("00") + ":" + seconds.ToString("00"));
+        int seconds = Mathf.FloorToInt(GameStateManager.Instance.TotalTime % 60); // Calcula los segundos
+        OutOfTime.text = (minutes.ToString("00") + ":" + seconds.ToString("00")); // Genera el time con los minutos i segundos
     }
 
+    //El contador de animales salvados 
     public void UpdateAnimalSaved()
     {
         AnimalsSavedText.text = GameStateManager.Instance.AnimalsSaved.ToString();
     }
 
+    // Window game over
     public void ShowGameOverWindow()
     {
         gameOverWindow.SetActive(true);

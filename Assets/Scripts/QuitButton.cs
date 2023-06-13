@@ -12,9 +12,10 @@ public class QuitButton : MonoBehaviour
 
     void Update()
     {
+        //If the player is inside and its jumping then we Quit
         if (isplayerinside)
         {
-            if (currentplayer.transform.position.y > -17f)
+            if (currentplayer.transform.position.y > -15f)
             {
                 UnityEngine.Application.Quit();
             }

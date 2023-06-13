@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     public Player playerObject1;
     public Player playerObject2;
     public Material playerEmpty;
-    //public Material playerisjumping;
 
     // Start is called before the first frame update
     void Start()
@@ -43,23 +42,26 @@ public class GameManager : MonoBehaviour
         // Check if the players are jumping
         if (playerObject1.isjumping && playerObject2.isjumping)
         {
-            //playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerisjumping;
-            //playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerisjumping;
+            //Check if the two animals are not null 
             if (playerObject1.animalobject != null && playerObject2.animalobject != null)
             {
+                //If player takes an animal with a tag
                 switch (playerObject1.animalobject.tag)
                 {
-
                     case "Chicken":
+                        //the other animal is take by the other player
                         if (playerObject2.animalobject.tag == "Chicken2")
                         {
+                            //destroy the two animals, the two player areas return to red, actualized the counter and play a check sound
                             Destroy(playerObject1.animalobject);
                             Destroy(playerObject2.animalobject);
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
+                    // The same case as the other but, the other way around
                     case "Chicken2":
                         if (playerObject2.animalobject.tag == "Chicken")
                         {
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Duck":
@@ -78,6 +81,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Duck2":
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Taipan":
@@ -98,6 +103,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Taipan2":
@@ -108,6 +114,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Gecko":
@@ -128,6 +135,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Colobus":
@@ -138,6 +146,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Colobus2":
@@ -148,6 +157,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Muskrat":
@@ -170,6 +180,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
 
                         }
                         break;
@@ -181,6 +192,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Pudu2":
@@ -191,6 +203,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Sparrow":
@@ -201,6 +214,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
                     case "Sparrow2":
@@ -211,6 +225,7 @@ public class GameManager : MonoBehaviour
                             playerObject1.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             playerObject2.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = playerEmpty;
                             GameStateManager.Instance.SavedAnimal();
+                            SoundManager.Instance.PlayCheck();
                         }
                         break;
 

@@ -11,12 +11,11 @@ public class StartButton : MonoBehaviour
 
     void Update()
     {
+        //If the player is inside and its jumping then goes to the scene Scene
         if (isplayerinside)
         {
-            Debug.Log(currentplayer.transform.position.y);
             if (currentplayer.transform.position.y > -15f)
             {
-                
                 SceneManager.LoadScene("Scene");
             }
         }
